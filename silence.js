@@ -13,11 +13,10 @@
             return;
         }
 
+        // Handle the special elements.
         if (elementOrNode instanceof HTMLInputElement) {
             elementOrNode.value = replaceText(elementOrNode.value);
-        }
-
-        if (elementOrNode instanceof HTMLAnchorElement) {
+        } else if (elementOrNode instanceof HTMLAnchorElement) {
             elementOrNode.title = replaceText(elementOrNode.title);
         }
 
